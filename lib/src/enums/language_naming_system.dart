@@ -7,6 +7,6 @@
 /// 2. [native] : तेत्तिस करोड तेत्तिस लाख तेत्तिस हजार तिन सय तेत्तिस
 
 enum LanguageNamingSystem {
-  roman,
   native,
+  international,
 }
