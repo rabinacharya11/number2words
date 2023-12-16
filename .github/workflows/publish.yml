@@ -15,9 +15,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Build package
-        run: flutter pub run build_runner build --delete-conflicting-outputs
-
       - name: Publish to pub.dev
         run: flutter pub publish
 
