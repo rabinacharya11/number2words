@@ -28,23 +28,43 @@ import 'package:number2words/number2words.dart';
 3. **Convert your numbers:**
 
 ```dart 
-/// For English language
-final words = Number2Words.convert(1234567); 
-// "One Million Two Hundred Thirty-Four Thousand Five Hundred Sixty-Seven dollars"
 
-Number2Words.convert(1234567890),
-"One Billion Two Hundred Thirty-four Million Five Hundred Sixty-seven Thousand Eight Hundred Ninety Dollars" 
+ /// Example of usage
+            Number2Words.convert(
+              123444.03,
+              language: Number2WordsLanguage.english,
+              wordCase: WordCaseEnum.titleCase,
+            ),
+            ///  One Lakh Twenty Three Thousand Four Hundred Forty Four Rupees And Three Paisa Only
 
+            /// Example of usage
+            Number2Words.convert(
+              123444.03,
+              language: Number2WordsLanguage.nepali,
+              wordCase: WordCaseEnum.titleCase,
+              languageNamingSystem: LanguageNamingSystem.native
+            ),
 
-Number2Words.convert(1234567.890),
-"One Million Two Hundred Thirty-four Thousand Five Hundred Sixty-seven Dollars And Eighty-nine Cents"
+            ///  एक लाख तेइस हजार चार सय चवालिस रुपैया, तीन पैसा
 
- Number2Words.convert(111111.1),
-"One Hundred Eleven Thousand One Hundred Eleven Dollars And One Cent "
+            /// Example of usage
+            Number2Words.convert(
+              123444.03,
+              language: Number2WordsLanguage.nepali,
+              wordCase: WordCaseEnum.titleCase,
+              languageNamingSystem: LanguageNamingSystem.semiNative,
+            ),
 
+            /// One Lakh Twenty-three Thousand Four Hundred Forty-four Rupees And Three Paisa
 
- Number2Words.convert(333.33),
-"Three Hundred Thirty-three Dollars And Thirty-three Cents"
+          Number2Words.convert(
+              11123444.03,
+              language: Number2WordsLanguage.nepali,
+              wordCase: WordCaseEnum.titleCase,
+              languageNamingSystem: LanguageNamingSystem.international,
+            ),
+
+            /// Eleven Million One Hundred Twenty-three Thousand Four Hundred Forty-four Rupees And Three Paisa
 ```
 
 ### Contribute to Number2Words!
@@ -59,7 +79,7 @@ We welcome your contributions to improve Number2Words! Feel free to:
 
 Number2Words is released under the MIT license.
 
-We hope Number2Words becomes a valuable asset in your Flutter development toolkit!
+We hope number2words becomes a valuable asset in your Flutter development toolkit!
 
 **Happy coding!**
 

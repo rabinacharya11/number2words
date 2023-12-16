@@ -110,11 +110,10 @@ packages:
   number2words:
     dependency: "direct main"
     description:
-      name: number2words
-      sha256: f110502a124eded44ce3348c477b0627f32a9add866db1fe80d468d44ff1c42d
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.0.2"
+      path: ".."
+      relative: true
+    source: path
+    version: "0.0.4"
   path:
     dependency: transitive
     description:

@@ -58,7 +58,42 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
 
             /// Example of usage
-            Text(Number2Words.convert(123444.03)),
+            Text(Number2Words.convert(
+              123444.03,
+              language: Number2WordsLanguage.english,
+              wordCase: WordCaseEnum.titleCase,
+            )),
+
+            ///  One Lakh Twenty Three Thousand Four Hundred Forty Four Rupees And Three Paisa Only
+
+            /// Example of usage
+            Text(Number2Words.convert(
+              123444.03,
+              language: Number2WordsLanguage.nepali,
+              wordCase: WordCaseEnum.titleCase,
+              languageNamingSystem: LanguageNamingSystem.native
+            )),
+
+            ///  एक लाख तेइस हजार चार सय चवालिस रुपैया, तीन पैसा
+
+            /// Example of usage
+            Text(Number2Words.convert(
+              123444.03,
+              language: Number2WordsLanguage.nepali,
+              wordCase: WordCaseEnum.titleCase,
+              languageNamingSystem: LanguageNamingSystem.semiNative,
+            )),
+
+            /// One Lakh Twenty-three Thousand Four Hundred Forty-four Rupees And Three Paisa
+
+            Text(Number2Words.convert(
+              11123444.03,
+              language: Number2WordsLanguage.nepali,
+              wordCase: WordCaseEnum.titleCase,
+              languageNamingSystem: LanguageNamingSystem.international,
+            )),
+
+            /// Eleven Million One Hundred Twenty-three Thousand Four Hundred Forty-four Rupees And Three Paisa
 
             Text(
               '$_counter',

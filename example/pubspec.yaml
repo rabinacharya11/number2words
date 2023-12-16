@@ -10,7 +10,8 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
-  number2words: ^0.0.2
+  number2words: 
+    path: ../
 
 dev_dependencies:
   flutter_test:
