@@ -27,9 +27,24 @@ import 'package:number2words/number2words.dart';
 
 3. **Convert your numbers:**
 
-```dart
+```dart 
+/// For English language
 final words = Number2Words.convert(1234567); 
-// "One Million Two Hundred Thirty-Four Thousand Five Hundred Sixty-Seven USD"
+// "One Million Two Hundred Thirty-Four Thousand Five Hundred Sixty-Seven dollars"
+
+Number2Words.convert(1234567890),
+"One Billion Two Hundred Thirty-four Million Five Hundred Sixty-seven Thousand Eight Hundred Ninety Dollars" 
+
+
+Number2Words.convert(1234567.890),
+"One Million Two Hundred Thirty-four Thousand Five Hundred Sixty-seven Dollars And Eighty-nine Cents"
+
+ Number2Words.convert(111111.1),
+"One Hundred Eleven Thousand One Hundred Eleven Dollars And One Cent "
+
+
+ Number2Words.convert(333.33),
+"Three Hundred Thirty-three Dollars And Thirty-three Cents"
 ```
 
 ### Contribute to Number2Words!
@@ -46,10 +61,6 @@ Number2Words is released under the MIT license.
 
 We hope Number2Words becomes a valuable asset in your Flutter development toolkit!
 
-**Please note:** This is a template, so feel free to customize it to fit your specific package's features and functionalities. Don't forget to update the package name, version, and link to the pub.dev page.
-
 **Happy coding!**
-
-I hope this conversion to md format is accurate and useful for you!
 
 
