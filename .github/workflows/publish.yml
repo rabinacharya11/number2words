@@ -1,0 +1,38 @@
+name: Publish Package
+
+on:
+  release:
+    types:
+      - created
+
+jobs:
+  publish:
+    permissions:
+      id-token: write
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '2.x' # Replace with your desired Flutter version
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Build package
+        run: flutter pub run build_runner build --delete-conflicting-outputs
+
+      - name: Publish to pub.dev
+        run: flutter pub publish
+
+      - name: Create GitHub release
+        uses: actions/create-release@v1
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: false
+          prerelease: false

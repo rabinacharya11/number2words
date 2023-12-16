@@ -49,8 +49,8 @@ class RussianConstants {
     'девятнадцать',
   ];
 
-  /// tens names in russian language 
-  /// 
+  /// tens names in russian language
+  ///
   static const List<String> tensNames = [
     'ноль',
     'десять',
@@ -62,7 +62,5 @@ class RussianConstants {
     'семьдесят',
     'восемьдесят',
     'девяносто',
-  ]; 
-
-  
+  ];
 }
