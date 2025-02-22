@@ -135,9 +135,10 @@ class Number2WordNepali {
                 text += EnglishConstants.tensNames[kharab ~/ 10];
                 kharab = kharab % 10;
                 if (kharab == 0) {
-                  return '$text kharab';
+                  text += ' kharab ';
+                } else {
+                  text += '-${EnglishConstants.singleUnits[kharab]} kharab ';
                 }
-                text += '-${EnglishConstants.singleUnits[kharab]} kharab ';
               }
               break;
             default:
@@ -161,9 +162,10 @@ class Number2WordNepali {
                 text += EnglishConstants.tensNames[arab ~/ 10];
                 arab = arab % 10;
                 if (arab == 0) {
-                  return '$text arab';
+                  text += ' arab ';
+                } else {
+                  text += '-${EnglishConstants.singleUnits[arab]} arab ';
                 }
-                text += '-${EnglishConstants.singleUnits[arab]} arab ';
               }
               break;
             default:
@@ -187,9 +189,10 @@ class Number2WordNepali {
                 text += EnglishConstants.tensNames[crore ~/ 10];
                 crore = crore % 10;
                 if (crore == 0) {
-                  return '$text crore';
+                  text += ' crore ';
+                } else {
+                  text += '-${EnglishConstants.singleUnits[crore]} crore ';
                 }
-                text += '-${EnglishConstants.singleUnits[crore]} crore ';
               }
 
               break;
@@ -214,9 +217,10 @@ class Number2WordNepali {
                 text += EnglishConstants.tensNames[lakh ~/ 10];
                 lakh = lakh % 10;
                 if (lakh == 0) {
-                  return '$text lakh';
+                  text += ' lakh ';
+                } else {
+                  text += '-${EnglishConstants.singleUnits[lakh]} lakh ';
                 }
-                text += '-${EnglishConstants.singleUnits[lakh]} lakh ';
               }
 
               break;
@@ -241,9 +245,11 @@ class Number2WordNepali {
                 text += EnglishConstants.tensNames[thousand ~/ 10];
                 thousand = thousand % 10;
                 if (thousand == 0) {
-                  return '$text thousand';
+                  text += ' thousand ';
+                } else {
+                  text +=
+                      '-${EnglishConstants.singleUnits[thousand]} thousand ';
                 }
-                text += '-${EnglishConstants.singleUnits[thousand]} thousand ';
               }
               break;
             default:
