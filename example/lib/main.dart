@@ -59,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
             /// Example of usage
             Text(Number2Words.convert(
-              123444.03,
+              _counter,
               language: Number2WordsLanguage.english,
               wordCase: WordCaseEnum.titleCase,
             )),
@@ -68,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
             /// Example of usage
             Text(Number2Words.convert(
-              123444.03,
+              _counter,
               language: Number2WordsLanguage.nepali,
               wordCase: WordCaseEnum.titleCase,
               languageNamingSystem: LanguageNamingSystem.native
@@ -78,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
             /// Example of usage
             Text(Number2Words.convert(
-              123444.03,
+              _counter,
               language: Number2WordsLanguage.nepali,
               wordCase: WordCaseEnum.titleCase,
               languageNamingSystem: LanguageNamingSystem.semiNative,
@@ -87,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
             /// One Lakh Twenty-three Thousand Four Hundred Forty-four Rupees And Three Paisa
 
             Text(Number2Words.convert(
-              11123444.03,
+              _counter,
               language: Number2WordsLanguage.nepali,
               wordCase: WordCaseEnum.titleCase,
               languageNamingSystem: LanguageNamingSystem.international,
@@ -96,7 +96,20 @@ class _MyHomePageState extends State<MyHomePage> {
             /// Eleven Million One Hundred Twenty-three Thousand Four Hundred Forty-four Rupees And Three Paisa
 
             Text(
-              '$_counter',
+              Number2Words.convert(
+                _counter,
+                language: Number2WordsLanguage.nepali,
+                wordCase: WordCaseEnum.titleCase,
+                languageNamingSystem: LanguageNamingSystem.international,
+              ),
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            Text(
+              Number2Words.convert(
+                _counter,
+                language: Number2WordsLanguage.spanish,
+                wordCase: WordCaseEnum.sentenceCase,
+              ),
               style: Theme.of(context).textTheme.headlineMedium,
             ),
           ],
