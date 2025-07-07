@@ -1,6 +1,6 @@
 name: number2words
 description: "A new Flutter package for converting numbers to words. This package suits best for multilingual applications and is inspired by the PHP package"
-version: 0.0.4
+version: 0.0.5
 repository: https://github.com/rabinacharya11/number2words
 homepage: https://rabinacharya.info.np
 git: https://github.com/rabinacharya11/number2words
