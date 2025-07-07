@@ -53,14 +53,14 @@ class Number2Words {
       //         languageNamingSystem ?? LanguageNamingSystem.native,
       //   );
 
-      // case Number2WordsLanguage.spanish:
-      //   return Number2WordsSpanish.convert(
-      //     number,
-      //     isCurrency: isCurrency,
-      //     wordCase: wordCase,
-      //     languageNamingSystem:
-      //         languageNamingSystem ?? LanguageNamingSystem.native,
-      //   );
+      case Number2WordsLanguage.spanish:
+        return Number2WordsSpanish.convert(
+          number,
+          isCurrency: isCurrency,
+          wordCase: wordCase,
+          languageNamingSystem:
+              languageNamingSystem ?? LanguageNamingSystem.native,
+        );
       default:
         return Number2WordEnglish.convert(
           number,

@@ -2,7 +2,7 @@ class SpanishConstants {
   ///numNames
   static const List<String> singleUnits = [
     '',
-    'uno',
+    'un',
     'dos',
     'tres',
     'cuatro',
@@ -21,6 +21,16 @@ class SpanishConstants {
     'diecisiete',
     'dieciocho',
     'diecinueve',
+    'veinte',
+    'veintiuno',
+    'veintidós',
+    'veintitrés',
+    'veinticuatro',
+    'veinticinco',
+    'veintiséis',
+    'veintisiete',
+    'veintiocho',
+    'veintinueve',
   ];
 
   static const List<String> singleUnitsPrefix = [
@@ -51,7 +61,8 @@ class SpanishConstants {
   ];
 
   static List<String> centenasNames = [
-    'cien',
+    '',
+    'ciento',
     'doscientos',
     'trescientos',
     'cuatrocientos',

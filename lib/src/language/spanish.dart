@@ -2,29 +2,8 @@ import 'package:number2words/src/enums/language_naming_system.dart';
 import 'package:number2words/src/enums/word_case_enum.dart';
 import 'package:number2words/src/constants/currency_constants.dart';
 import 'package:number2words/src/constants/spanish_constants.dart';
-import 'package:number2words/src/enums/language_naming_system.dart';
-import 'package:number2words/src/enums/word_case_enum.dart';
 import 'package:number2words/src/helpers/input_validator.dart';
 import 'package:number2words/src/helpers/letter_case_converter.dart';
-
-class Number2WordsSpanish {
-  /// [convert] : method to convert the numbers to hindi words
-  static String convert(
-    Object number, {
-    bool isCurrency = true,
-    WordCaseEnum wordCase = WordCaseEnum.titleCase,
-
-    /// [languageNamingSystem] : the naming system to be used to convert the numbers to words
-    /// eg : native will convert 1000 to "एक हज़ार"
-    ///     international will convert 100,000 to "One Lac"
-    LanguageNamingSystem languageNamingSystem = LanguageNamingSystem.native,
-  }) {
-    String text = '';
-    return text;
-  }
-}
-
-
 
 class Number2WordsSpanish {
   static String _convert3Numbers(num number) {
@@ -33,11 +12,14 @@ class Number2WordsSpanish {
     if (number == 0) {
       return "cero";
     }
+    if (number == 100) {
+      return "cien";
+    }
 
     final hundredPosition = number ~/ 100;
 
     if (hundredPosition != 0) {
-      text += "${SpanishConstants.singleUnitsPrefix[hundredPosition]} hundred ";
+      text += "${SpanishConstants.centenasNames[hundredPosition]} ";
     }
 
     number = number % 100;
@@ -54,7 +36,7 @@ class Number2WordsSpanish {
       if (number == 0) {
         return text;
       }
-      text += '-${SpanishConstants.singleUnits[int.parse(number.toString())]}';
+      text += ' y ${SpanishConstants.singleUnits[int.parse(number.toString())]}';
     }
 
     return text;
@@ -92,25 +74,28 @@ class Number2WordsSpanish {
       intPart = intPart.abs();
     }
 
-    if (!isCurrency) {
-      //!TODO : Implement the code for non-currency numbers
-    } else {
-      String stringNumber = intPart.toString().padLeft(12, '0');
+    String stringNumber = intPart.toString().padLeft(12, '0');
 
-      final billions = int.parse(stringNumber.substring(0, 3));
-      final millions = int.parse(stringNumber.substring(3, 6));
-      final thousands = int.parse(stringNumber.substring(6, 9));
-      final hundreds = int.parse(stringNumber.substring(9, 12));
+    final billions = int.parse(stringNumber.substring(0, 3));
+    final millions = int.parse(stringNumber.substring(3, 6));
+    final thousands = int.parse(stringNumber.substring(6, 9));
+    final hundreds = int.parse(stringNumber.substring(9, 12));
 
-      if (billions != 0) {
-        text += "${_convert3Numbers(billions)} billón ";
-      }
-      if (millions != 0) {
-        text += "${_convert3Numbers(millions)} millón ";
-      }
-      if (thousands != 0) {
-        text += "${_convert3Numbers(thousands)} mil ";
-      }
+    if (billions == 1) {
+      text += "un mil ";
+    } else if (billions > 1) {
+      text += "${_convert3Numbers(billions)} mil ";
+    }
+    if (millions == 1) {
+      text += "${_convert3Numbers(millions)} millón ";
+    } else if (millions > 1) {
+      text += "${_convert3Numbers(millions)} millones ";
+    }
+    if (thousands != 0) {
+      text += "${_convert3Numbers(thousands)} mil ";
+    }
+
+    if (isCurrency) {
       if (hundreds != 0) {
         if (hundreds == 1) {
           text +=
@@ -120,17 +105,19 @@ class Number2WordsSpanish {
               "${_convert3Numbers(hundreds)}  ${CurrencyConstants.englishCurrencyPlural} ";
         }
       }
+    }
 
-      /// converting decimal part to integer
-      int decimalPart = int.parse(decimalPartString.toString());
+    /// converting decimal part to integer
+    int decimalPart = int.parse(decimalPartString.toString());
 
-      if (decimalPart != 0) {
-        text += 'and ';
-        text += _convert3Numbers(decimalPart);
+    if (decimalPart != 0) {
+      text += 'con ';
+      text += _convert3Numbers(decimalPart);
+      if (isCurrency) {
         if (decimalPart == 1) {
-          text += ' cent ';
+          text += ' centavo ';
         } else {
-          text += ' cents ';
+          text += ' centavos ';
         }
       }
     }
