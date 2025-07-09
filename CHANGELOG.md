@@ -1,3 +1,7 @@
+## 0.0.6
+
+* Fixed bug in Spanish Language Conversion without currency
+
 ## 0.0.5
 
 * Spanish Language Conversion

@@ -46,8 +46,8 @@ class CurrencyConstants {
 
   /// [spanishCurrencySubunit] and [spanishCurrencySubunitPlural] are used in
   /// [Number2WordsSpanish.convert] method
-  static const String spanishCurrencySubunit = 'cent';
-  static const String spanishCurrencySubunitPlural = 'cents';
+  static const String spanishCurrencySubunit = 'centavo';
+  static const String spanishCurrencySubunitPlural = 'centavos';
 
   /// [englishCurrencySubunit] and [englishCurrencySubunitPlural] are used in [Number2WordsEnglish.convert] method
 }

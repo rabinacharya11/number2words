@@ -95,15 +95,14 @@ class Number2WordsSpanish {
       text += "${_convert3Numbers(thousands)} mil ";
     }
 
-    if (isCurrency) {
-      if (hundreds != 0) {
-        if (hundreds == 1) {
-          text +=
-              "${_convert3Numbers(hundreds)} ${CurrencyConstants.englishCurrency} ";
-        } else {
-          text +=
-              "${_convert3Numbers(hundreds)}  ${CurrencyConstants.englishCurrencyPlural} ";
-        }
+    if (hundreds != 0) {
+      text += "${_convert3Numbers(hundreds)} ";
+      if (isCurrency && hundreds == 1) {
+        text +=
+            "${CurrencyConstants.spanishCurrencyNative} ";
+      } else if (isCurrency) {
+        text +=
+            " ${CurrencyConstants.spanishCurrencyPluralNative} ";
       }
     }
 
@@ -115,9 +114,9 @@ class Number2WordsSpanish {
       text += _convert3Numbers(decimalPart);
       if (isCurrency) {
         if (decimalPart == 1) {
-          text += ' centavo ';
+          text += ' ${CurrencyConstants.spanishCurrencySubunit} ';
         } else {
-          text += ' centavos ';
+          text += ' ${CurrencyConstants.spanishCurrencySubunitPlural} ';
         }
       }
     }

@@ -34,16 +34,17 @@ void main() {
     test('Convert the numbers into words in Lowercase', () {
       /// Defining test cases for the code to be tested
       Map<num, String> testCases = {
-        111: "ciento once dollars ",
-        100: 'cien dollars ',
-        1: 'un dollar ',
-        23: 'veintitrés dollars ',
-        10: 'diez dollars ',
-        999: 'novecientos noventa y nueve dollars ',
+        111: "ciento once dólares ",
+        100: 'cien dólares ',
+        1: 'un dólar ',
+        23: 'veintitrés dólares ',
+        10: 'diez dólares ',
+        999: 'novecientos noventa y nueve dólares ',
+        2604.75: 'dos mil seiscientos cuatro dólares con setenta y cinco centavos ',
         11111111:
-            'once millones ciento once mil ciento once dollars ',
+            'once millones ciento once mil ciento once dólares ',
         111111111111.11:
-            'ciento once mil ciento once millones ciento once mil ciento once dollars con once centavos ',
+            'ciento once mil ciento once millones ciento once mil ciento once dólares con once centavos ',
       };
 
       /// Runing the test cases using a loop
@@ -59,16 +60,16 @@ void main() {
     test('Convert the numbers into words in UpperCase', () {
       /// Defining test cases for the code to be tested
       Map<num, String> testCases = {
-        111: 'ciento once dollars '.toUpperCase(),
-        100: 'cien dollars '.toUpperCase(),
-        1: 'un dollar '.toUpperCase(),
-        23: 'veintitrés dollars '.toUpperCase(),
-        10: 'diez dollars '.toUpperCase(),
-        999: 'novecientos noventa y nueve dollars '.toUpperCase(),
+        111: 'ciento once dólares '.toUpperCase(),
+        100: 'cien dólares '.toUpperCase(),
+        1: 'un dólar '.toUpperCase(),
+        23: 'veintitrés dólares '.toUpperCase(),
+        10: 'diez dólares '.toUpperCase(),
+        999: 'novecientos noventa y nueve dólares '.toUpperCase(),
         11111111:
-            'once millones ciento once mil ciento once dollars '.toUpperCase(),
+            'once millones ciento once mil ciento once dólares '.toUpperCase(),
         111111111111.11:
-            'ciento once mil ciento once millones ciento once mil ciento once dollars con once centavos '
+            'ciento once mil ciento once millones ciento once mil ciento once dólares con once centavos '
               .toUpperCase(),
       };
 
@@ -85,15 +86,15 @@ void main() {
     test('Convert the numbers into words in TitleCase', () {
       /// Defining test cases for the code to be tested
       Map<num, String> testCases = {
-        111: "Ciento Once Dollars ",
-        1: 'Un Dollar ',
-        23: 'Veintitrés Dollars ',
-        10: 'Diez Dollars ',
-        999: 'Novecientos Noventa Y Nueve Dollars ',
+        111: "Ciento Once Dólares ",
+        1: 'Un Dólar ',
+        23: 'Veintitrés Dólares ',
+        10: 'Diez Dólares ',
+        999: 'Novecientos Noventa Y Nueve Dólares ',
         11111111:
-            'Once Millones Ciento Once Mil Ciento Once Dollars ',
+            'Once Millones Ciento Once Mil Ciento Once Dólares ',
         111111111111.11:
-            'Ciento Once Mil Ciento Once Millones Ciento Once Mil Ciento Once Dollars Con Once Centavos ',
+            'Ciento Once Mil Ciento Once Millones Ciento Once Mil Ciento Once Dólares Con Once Centavos ',
       };
 
       /// Runing the test cases using a loop
@@ -109,15 +110,15 @@ void main() {
     test('Convert the numbers into words in Sentence Case', () {
       /// Defining test cases for the code to be tested
       Map<num, String> testCases = {
-        111: "Ciento once dollars ",
-        1: 'Un dollar ',
-        23: 'Veintitrés dollars ',
-        10: 'Diez dollars ',
-        999: 'Novecientos noventa y nueve dollars ',
+        111: "Ciento once dólares ",
+        1: 'Un dólar ',
+        23: 'Veintitrés dólares ',
+        10: 'Diez dólares ',
+        999: 'Novecientos noventa y nueve dólares ',
         11111111:
-            'Once millones ciento once mil ciento once dollars ',
+            'Once millones ciento once mil ciento once dólares ',
         111111111111.11:
-            'Ciento once mil ciento once millones ciento once mil ciento once dollars con once centavos ',
+            'Ciento once mil ciento once millones ciento once mil ciento once dólares con once centavos ',
       };
 
       /// Runing the test cases using a loop
