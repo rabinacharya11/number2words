@@ -1,3 +1,8 @@
+## 0.0.6
+
+* Nepali Language Conversion fixes  [#6](https://github.com/rabinacharya11/number2words/issues/6)
+* Added CI CD workflow
+
 ## 0.0.5
 
 * Spanish Language Conversion
