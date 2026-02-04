@@ -298,7 +298,7 @@ void main() {
 
     test('hhdf', () {
       print(Number2Words.convert(
-        11123444.03,
+        90461,
         language: Number2WordsLanguage.nepali,
         wordCase: WordCaseEnum.titleCase,
         languageNamingSystem: LanguageNamingSystem.international,
